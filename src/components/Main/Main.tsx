@@ -4,7 +4,6 @@ import {Hero} from "../Hero/Hero"
 import { About } from "../About/About";
 import { Contact } from "../Contact/Contact";
 // import { Portfolio } from "../Portfolio/Portfolio";
-
 import boostrapIcon from "../../assets/bootstrap-icon.svg";
 import cssIcon from "../../assets/css-icon.svg";
 import htmlIcon from "../../assets/html-icon.svg";

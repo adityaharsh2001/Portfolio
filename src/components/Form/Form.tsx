@@ -1,14 +1,55 @@
-import { Container } from "./styles";
-import { useForm, ValidationError } from '@formspree/react';
+import { Container, ContainerSucces } from './styles'
+import { useForm, ValidationError } from '@formspree/react'
+import { toast, ToastContainer } from 'react-toastify'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { useEffect, useState } from 'react'
+import validator from 'validator'
 
-export function Form(){
+export function Form() {
+  const [state, handleSubmit] = useForm('myyozglw')
 
+  const [validEmail, setValidEmail] = useState(false)
+  const [isHuman, setIsHuman] = useState(false)
+  const [message, setMessage] = useState('')
 
-  const [state, handleSubmit] = useForm("mknyorag");
-  
-  return(
+  function verifyEmail(email: string) {
+    if (validator.isEmail(email)) {
+      setValidEmail(true)
+    } else {
+      setValidEmail(false)
+    }
+  }
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success('Email enviado com sucesso!', {
+        position: toast.POSITION.BOTTOM_LEFT,
+        pauseOnFocusLoss: false,
+        closeOnClick: true,
+        hideProgressBar: false,
+        toastId: 'succeeded',
+      })
+    }
+  })
+  if (state.succeeded) {
+    return (
+      <ContainerSucces>
+        <h3>Obrigado por entrar em contato!</h3>
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+        >
+          Voltar ao topo
+        </button>
+        <ToastContainer />
+      </ContainerSucces>
+    )
+  }
+
+  return (
     <Container>
-      <h2>Get in touch using the form below</h2>
+     <h2>Get in touch using the form below</h2>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Email"
@@ -35,6 +76,7 @@ export function Form(){
           Send
         </button>
     </form>
+      <ToastContainer />
     </Container>
   )
 }

@@ -25,6 +25,7 @@ export const Container = styled.div`
       background:none;
       border: 1px solid #FFF;
       color: white;
+      font-weight: 600;
       &::placeholder{
         color: #FFF;
       }
@@ -33,6 +34,7 @@ export const Container = styled.div`
     textarea{
       height: 20rem;
       overflow-y: auto;
+      resize: none;
     }
 
     button{
@@ -50,5 +52,20 @@ export const Container = styled.div`
         width: 100%;
       }
     }
+  }
+`
+
+
+export const ContainerSucces = styled.div`
+  margin-top: 10rem;
+  text-align: center;
+
+  button{
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fbfbfb;
   }
 `
