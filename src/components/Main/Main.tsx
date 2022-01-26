@@ -244,7 +244,7 @@ export function Main(){
           "size": "cover"
         }
       }}
-    />
+    ></Particles>
       <Hero></Hero>
       <About></About>
       {/* <Portfolio></Portfolio> */}
