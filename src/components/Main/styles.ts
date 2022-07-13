@@ -6,6 +6,7 @@ export const Container = styled.main`
   z-index: 0;
   padding: 0 10rem;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
   #tsparticles{
     position: absolute;
     left: 0;

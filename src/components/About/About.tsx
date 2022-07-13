@@ -12,20 +12,32 @@ import ScrollAnimation from "react-animate-on-scroll";
 import cppIcon from "../../assets/icons8-c++.svg";
 import javaIcon from "../../assets/icons8-java.svg";
 
-
 export function About() {
   return (
-    <Container id="sobre">
+    <Container id="about">
       <div className="about-text">
         <ScrollAnimation animateIn="fadeInLeft">
           <h2>About Me</h2>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000}>
           <p>
-            My name is Aditya Harsh, I'm a Tech Geek with a great passion for
-            programming. I am very passionate accepting new challenges and
-            delivering the solutions. Currently improving my skills as a
-            Front-End and Back-End developer.
+            I'm particularly interested in the topics of code quality
+            and scalability,   I work hard to advance in these areas, but I also
+            make an effort to broaden my perspective to include areas like
+            competitive coding and open source.
+          </p>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          delay={0.4 * 1000}
+          style={{ marginTop: "2rem", marginBottom: "2rem" }}
+          >
+            <p>
+          In general, I enjoy researching and writing on issues relating to
+          software architecture and quality. I prefer to think of myself as an
+          enthusiastic developer, an advocate for open source, and a
+          eternal learner.
+
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -34,9 +46,7 @@ export function About() {
           style={{ marginTop: "2rem", marginBottom: "2rem" }}
         >
           <p>
-            I develop Full-Stack Applications using React, Angular, NodeJs and
-            MongoDB. I am familiar with developing layouts that provide me. I'm
-            always improving myself with each project I get my hands on.
+  
           </p>
         </ScrollAnimation>
         <ScrollAnimation
@@ -102,10 +112,7 @@ export function About() {
       </div>
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
-          <img
-            src={profileImage}
-            alt="Imagem de perfil"
-          />
+          <img src={profileImage} alt="Imagem de perfil" />
         </ScrollAnimation>
       </div>
     </Container>

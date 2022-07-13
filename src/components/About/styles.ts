@@ -5,13 +5,18 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-
+  scroll-snap-align: start;
+  height: 100vh;
   .hard-skills{
     margin-top: 1.6rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.8rem;
+  }
+
+  #about {
+  scroll-snap-align: start;
   }
   .hability{
     display: flex;

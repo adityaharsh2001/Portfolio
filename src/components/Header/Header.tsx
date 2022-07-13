@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 
-import CV from '../../assets/CV.pdf'
+// import CV from '../../assets/CV.pdf'
 export function Header() {
   const [isActive, setActive] = useState(false)
 
@@ -12,9 +12,9 @@ export function Header() {
     html.classList.toggle('light')
   }
 
-  function closeMenu() {
-    setActive(false)
-  }
+  // function closeMenu() {
+  //   setActive(false)
+  // }
 
   return (
     <Container className="header-fixed">
@@ -35,10 +35,10 @@ export function Header() {
 
         <nav className={isActive ? 'active' : ''}>
             <NavHashLink smooth to="#home" >Home</NavHashLink>
-            <NavHashLink smooth to="#sobre">About</NavHashLink>
+            <NavHashLink smooth to="#about">About</NavHashLink>
             <NavHashLink smooth to="#portfolio">Portfolio</NavHashLink>
             <NavHashLink smooth to="#Contact">Contact</NavHashLink>
-            <a href={CV} download className="button">CV</a>
+            <a href='https://drive.google.com/file/d/1dTrsBGb7Ivz05m-wbOYBXvKQQWDAYHf0/view?usp=sharing' download className="button">CV</a>
           </nav>
 
 

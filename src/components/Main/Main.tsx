@@ -15,7 +15,19 @@ import sassIcon from "../../assets/sass-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
 import angularicon from "../../assets/angular-icon.svg";
+import { useEffect, useState } from "react";
 export function Main(){
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+      const onScroll = () => setOffset(window.pageYOffset);
+      // clean up code
+      window.removeEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  console.log(offset); 
   return(
 
     <Container>
@@ -247,7 +259,6 @@ export function Main(){
     ></Particles>
       <Hero></Hero>
       <About></About>
-      {/* <Portfolio></Portfolio> */}
       <Contact></Contact>
     </Container>
   );

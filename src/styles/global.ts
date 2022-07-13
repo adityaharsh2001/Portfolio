@@ -10,17 +10,22 @@ export const GlobalStyle = createGlobalStyle`
     --green: #23ce6b;
     --blue: #016fb9;
     scroll-padding-top: 10rem;
-
+    scroll-snap-type: y mandatory;
     &.light{
 
       body{
         transition: 0.5s;
         background-color: #f5f5f5;
         color: var(--black);
+        scroll-snap-type: y mandatory;
       }
 
       .logo{
         color: var(--black);
+      }
+      Container{
+        height: 100vh;
+        scroll-snap-align: start;
       }
 
       header.header-fixed{
@@ -56,6 +61,7 @@ export const GlobalStyle = createGlobalStyle`
         }
       }
 
+
     }
   }
 
@@ -76,6 +82,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html{
     font-size: 62.5%;
+    height: 100vh;
   }
 
   body{
@@ -120,6 +127,8 @@ export const GlobalStyle = createGlobalStyle`
       color: var(--green);
     }
   }
+
+  
   
 
 `

@@ -8,6 +8,7 @@ export const Container = styled.section`
   justify-content: space-between;
   gap: 8rem;
   background: rgba(0,0,0,0);
+  height: 100vh;
   .hero-text{
     & > p{
       font-size: 1.8rem;
@@ -38,6 +39,10 @@ export const Container = styled.section`
     }
   }
 
+  .resume_link {
+    color: var(--green)
+  }
+
 
   @media(max-width: 960px){
     display: block;
@@ -53,6 +58,7 @@ export const Container = styled.section`
       display: none;
     }
   }
+
 
   @media(max-width: 600px){
     margin-top: 25%;
